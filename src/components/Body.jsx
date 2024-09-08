@@ -2,22 +2,15 @@ import React, { useEffect ,useState} from 'react'
 import './body.css'
 import { FaStar } from "react-icons/fa";
 import { Header } from './header'
+// import axios from 'axios'
 
 function Body() {
-  const url = 'https://imdb-top-100-movies.p.rapidapi.com/';
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '6e95b6f46cmshd41f0602f481959p1269d0jsnaa59b2e22437',
-		'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
-	}
-};
-    const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(url, options);
+        const response = await fetch("https://imdb-top-100-movies.p.rapidapi.com/");
         const result = await response.json();
         setData(result);
       } catch (error) {
@@ -30,9 +23,9 @@ const options = {
   return (
     <>
     <Header/>
-    <div className='cards'>
+    <div className='cards '>
         {data.map((item=>
-        <div className='card'>
+        <div className='card '  data-aos="zoom-in">
             <img src={item.image} alt='img'/>
             <div className="txt">
             <h4>{item.title}</h4>

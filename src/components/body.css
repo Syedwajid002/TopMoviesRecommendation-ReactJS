@@ -19,13 +19,13 @@ body{
     flex-grow: 0;
     flex-basis: auto;
     padding: 5px;
-    margin: 10px;
+    margin: 20px;
     background: rgb(44, 40, 40);
     min-width: 160px;
     width: 200px;
     height: 250px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     color: aliceblue;
     transition: transform 0.3s;
@@ -66,6 +66,6 @@ button:hover {
 .card img {
     width: 100%;
     /* This makes the image take the full width of its container (the card) */
-    height: 50%;
+    height: 90%;
     /* This maintains the aspect ratio of the image */
 }
